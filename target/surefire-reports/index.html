@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">0 methods,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-MobiTest_MobiquityTest" class="hide-methods passed suite-MobiTest_MobiquityTest"> (hide)</a> <!-- hide-methods passed suite-MobiTest_MobiquityTest -->
+                      <a href="#" panel-name="suite-MobiTest_MobiquityTest" class="show-methods passed suite-MobiTest_MobiquityTest"> (show)</a> <!-- show-methods passed suite-MobiTest_MobiquityTest -->
+                    </span>
+                    <div class="method-list-content passed suite-MobiTest_MobiquityTest">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MobiTest_MobiquityTest" title="MobiTest.MobiquityTest" class="method navigator-link" hash-for-method="searchForUser">searchForUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-MobiTest_MobiquityTest -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -105,6 +119,21 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-MobiTest_MobiquityTest" class="panel MobiTest_MobiquityTest">
+          <div class="suite-MobiTest_MobiquityTest-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">MobiTest.MobiquityTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchForUser">
+                  </a> <!-- searchForUser -->
+                  <span class="method-name">searchForUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MobiTest_MobiquityTest-class-passed -->
         </div> <!-- panel MobiTest_MobiquityTest -->
         <div panel-name="test-xml-MobiTest_MobiquityTest" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -156,12 +185,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(0);
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'searchForUser')
+data.setCell(0, 2, 'MobiTest.MobiquityTest')
+data.setCell(0, 3, 8666);
 window.suiteTableData['MobiTest_MobiquityTest']= { tableData: data, tableDiv: 'times-div-MobiTest_MobiquityTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-MobiTest_MobiquityTest">
               </div> <!-- times-div-MobiTest_MobiquityTest -->
             </div> <!-- times-div -->
@@ -192,6 +225,10 @@ return data;
                 <span class="method-name">url</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+              <div class="test-method">
+                <span class="method-name">searchForUser</span>
+                <span class="method-start">1640 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="0" failures="0" name="MobiTest.MobiquityTest" time="0" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="MobiTest.MobiquityTest" time="8.679" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.1.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.11+9-LTS-194"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.11\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\olufemi.emmanuel\IdeaProjects\MobiProject"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\olufemi.emmanuel\IdeaProjects\MobiquityChallenge"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://openjdk.java.net/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="user.country" value="GB"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\olufemi.emmanuel\IdeaProjects\MobiProject"/>
+    <property name="user.dir" value="C:\Users\olufemi.emmanuel\IdeaProjects\MobiquityChallenge"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="11.0.11+9-LTS-194"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
@@ -64,4 +64,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
+  <testcase classname="MobiTest.MobiquityTest" name="searchForUser" time="8.679"/>
 </testsuite>
