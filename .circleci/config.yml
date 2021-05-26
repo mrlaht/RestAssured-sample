@@ -24,7 +24,7 @@ jobs:
           command: mvn test
        # Store test result
       - store_test_results:
-          path: MobiTest.MobiquityTest/test-results
+          path: MobiquityTest/test-results
       
        
 
