@@ -86,6 +86,10 @@ import java.util.Map;
             this.email = email;
         }
 
+        @JsonAnyGetter
+        public Map<String, Object> getOtherObjects() {
+            return this.otherObject;
+        }
 
        @JsonAnySetter
         public void otherObject(String name, Object value) {
