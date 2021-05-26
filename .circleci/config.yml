@@ -15,16 +15,16 @@ jobs:
       # Checkout the code as the first step.
       - checkout
       # Use mvn clean and package as the standard maven build phase
-      - run:
+      - run:   
           name: Build
           command: mvn -B -DskipTests clean package
       # Then run your tests!
-      - run:
-          name: Test
+      - run: 
+          name: Test 
           command: mvn test
        # Store test result
       - store_test_results:
-          path: test-results
+          path: MobiTest.MobiquityTest/test-results
       
        
 
