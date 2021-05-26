@@ -1,14 +1,15 @@
 package MobiTest;
 
+import Request.GetComments;
 import Request.GetPosts;
+import Request.GetUsers;
+import org.apache.commons.validator.routines.EmailValidator;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import Request.GetUsers;
 import org.testng.log4testng.Logger;
+import pojo.Comments;
 import pojo.Post;
 import pojo.User;
-
 import java.io.IOException;
 
 public class MobiquityTest {
@@ -58,10 +59,35 @@ public class MobiquityTest {
         int size = userPosts.length;
         log.info("Number of Post by user Delphine is: "+size);
         System.out.println("Number of Post by user Delphine is: "+size);
-
-
-
-
     }
- }
 
+
+        @Test(dependsOnMethods = { "searchForPostByUser" })
+        public void validateEmailsFormatInComments() throws IOException {
+
+            for (Post userPost: userPosts) {
+
+                GetComments getComments = new GetComments(baseURI);
+                getComments.setPostId(userPost.getId());
+                getComments.setStatusCode(200);
+                getComments.setup();
+                log.info("Get Comments of User Posts");
+                Comments[] comment = getComments.getResponseAsClass(Comments[].class);
+                int size = comment.length;
+                log.info("Number of Comment under Posts by user Delphine is: "+size);
+
+
+                for (Comments comments: comment) {
+                    String email = comments.getEmail();
+                    boolean result = EmailValidator.getInstance().isValid(email);
+                    assert result;
+                    log.info("Is  " +email+ " a valid email: "+result);
+                    System.out.println("Is  " +email+ " a valid email: "+result);
+
+
+
+                }
+            }
+        }
+
+}
