@@ -24,9 +24,9 @@ jobs:
           command: mvn test
        # Store test result
       - store_test_results:
-          path: build/test-results/test
+          path: /test-results/test
       - store_artifacts:
-          path: build/test-results/test
+          path: /test-results/test
           when: always 
        
 
