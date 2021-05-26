@@ -1,3 +1,3 @@
-ValidateEmail.class
-model\User.class
-model\Post.class
+pojo\Post.class
+pojo\Comments.class
+pojo\User.class

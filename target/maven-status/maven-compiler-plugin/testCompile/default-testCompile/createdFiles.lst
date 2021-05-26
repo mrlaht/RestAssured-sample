@@ -1,0 +1,5 @@
+MobiTest\MobiquityTest.class
+Request\GetComments.class
+Request\GetPosts.class
+resources\Utils.class
+Request\GetUsers.class
