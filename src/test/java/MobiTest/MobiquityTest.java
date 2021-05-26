@@ -1,35 +1,42 @@
 package MobiTest;
 
-import model.Post;
-import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import service.PostService;
-import service.UserService;
+import Request.GetUsers;
+import org.testng.log4testng.Logger;
+import pojo.User;
 
-import java.util.List;
+import java.io.IOException;
 
 public class MobiquityTest {
 
+    public static final Logger log = Logger.getLogger(MobiquityTest.class);
 
-    UserService userService;
-    PostService postService;
+    String baseURI;
 
-    public MobiquityTest(){
-        userService=new UserService();
-        postService=new PostService();
+    @BeforeTest
+    public void prepare() {
+        baseURI = "https://jsonplaceholder.typicode.com";
     }
+
+    Integer userId;
+
 
     @Test
-    public void searchForUserWithUsernameDelpine() throws Exception {
+    public void searchForUserWithUsername() throws IOException {
 
-            //Get Delphine's Details
-            Integer id = userService.getDephineId();
-            Assert.assertNotNull(id);
-            //Get Dephine's Posts
-            List<Post> delphinePosts=postService.getPosts(id);
-            System.out.println(delphinePosts);
-        }
+        GetUsers getUsers = new GetUsers(baseURI);
+        getUsers.setUsername("Delphine");
+        getUsers.setStatusCode(200);
+        getUsers.setup();
+        assert (getUsers.getResponseAsString().contains("Delphine"));
+        assert (getUsers.getResponseAsString().contains("Chaim_McDermott@dana.io"));
+        log.info("Username delphine was found with details");
+        User[] users = getUsers.getResponseAsClass(User[].class);
+        userId = users[0].getId();
+        System.out.println(userId);
 
     }
+ }
 
