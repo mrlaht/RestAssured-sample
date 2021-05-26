@@ -19,8 +19,9 @@ Flow to be tested:
 
 Test Design:
 
-Test Report Link : 
+Test Report: 
 
+Test report generated in allure-results folder.
 
 Tools/ libraries used: 
 
