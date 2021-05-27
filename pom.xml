@@ -53,13 +53,7 @@
             <argLine>
                 -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
 
-            </argLine>
-                        <properties>
-                            <property>
-                                <name>listener</name>
-                                <value>io.qameta.allure.allure-testng</value>
-                            </property>
-                        </properties>
+                             </argLine>
         </configuration>
         <dependencies>
             <dependency>
