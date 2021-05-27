@@ -12,12 +12,30 @@ The task is:
 Flow to be tested:
 
 1. Search for the user with username “Delphine”.
-2. Use the details fetched to make a search for the posts written by the
+    Steps: Validate response code 200
+    Validate email
+    get user details id.
+3. Use the details fetched to make a search for the posts written by the
    user.
+   Steps:
+   used userid to fetch post 
+   confirm post return has userid
+   confirm number of post returned
+   
 3. For each post, fetch the comments and validate if the emails in the
    comment section are in the proper format.
-
+Steps:
+   used postid to fetch comments 
+   confirm number of comments returned
+   validate email in each comment to know if valid.
+   
 Test Design:
+
+Created Pojo Classes for each test to accept the object respone of the test
+Create Util.java file to genearate Request and Response spec 
+Created Get Methods to handle each test resquest and response under the Request Package
+Use the test to run all the test scenario:
+
 
 Test Report: 
 
