@@ -1,4 +1,3 @@
-Mobiquity Challenge
 
 RestAssured-Java 
 
